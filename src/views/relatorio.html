@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Vendas</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center text-orange-600 mb-8">Relatório de Vendas Mensais</h1>
+        <div class="mb-4">
+            <a href="/" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Voltar</a>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">Filtrar por Mês</h2>
+            <form id="formRelatorio" class="space-y-4">
+                <div>
+                    <label for="mes" class="block text-sm font-medium text-gray-700">Mês</label>
+                    <input type="month" id="mes" name="mes" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm cursor-pointer">
+                </div>
+                <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 cursor-pointer">Gerar Relatório</button>
+            </form>
+        </div>
+        <!-- Nova div para o valor total do mês -->
+        <div id="totalMes" class="mt-"></div>
+        <div class="mt-8">
+            <div class="flex justify-center">
+                <h2 class="text-xl font-semibold mb-4">Resultado</h2>
+            </div>
+            <table class="min-w-full bg-white rounded shadow">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2">Data</th>
+                        <th class="px-4 py-2">Cliente</th>
+                        <th class="px-4 py-2">Total</th>
+                        <th class="px-4 py-2">Forma de Pagamento</th>
+                    </tr>
+                </thead>
+                <tbody id="listaRelatorio">
+                    <!-- Vendas serão carregadas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <script src="/js/relatorio.js"></script>
+</body>
+</html>
