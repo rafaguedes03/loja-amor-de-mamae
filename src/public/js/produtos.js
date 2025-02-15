@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="px-4 py-2">R$ ${parseFloat(produto.preco).toFixed(2)}</td>
                 <td class="px-4 py-2">${produto.quantidade_estoque}</td>
                 <td class="px-4 py-2">
-                    <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 cursor-pointer">Editar</button>
-                    <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 cursor-pointer">Excluir</button>
+                    <button onclick="abrirFormularioEdicao(${JSON.stringify(produto).replace(/"/g, '&quot;')})" class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 cursor-pointer">Editar</button>
+                    <button onclick="excluirProduto(${produto.id})" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 cursor-pointer">Excluir</button>
                 </td>
             </tr>
         `).join('');
